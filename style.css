@@ -35,7 +35,6 @@ body {
     font-family: "Stack Sans Notch", sans-serif;
 }
 
-/* The horizontal line */
 .timeline::before {
     content: "";
     position: absolute;
@@ -47,7 +46,6 @@ body {
     transform: translateY(-50%);
 }
 
-/* Each year */
 .event {
     position: relative;
     flex: 1;
