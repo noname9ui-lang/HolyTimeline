@@ -1,0 +1,4 @@
+.pattern-cross-dots-xl{
+    background-image:radial-gradient(currentColor 2px, transparent 2px), radial-gradient(currentColor 2px, transparent 2px);
+    background-size:calc(20 * 5px) calc(20 * 5px);
+    background-position:0 0,calc(10 * 5px) calc(10 * 5px)}

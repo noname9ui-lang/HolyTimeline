@@ -1,0 +1,75 @@
+[
+    {
+        "year": "0 CE",
+        "events": [
+            {
+                "title": "placeholder3",
+                "date": "0-0-0",
+                "type": "gigantic",
+                "description": "none",
+                "image-src": null,
+                "image-caption": null,
+                "sources": null
+            },
+            {
+                "title": "placeholder4",
+                "date": "1-1-1",
+                "type": "medium",
+                "description": "none",
+                "image-src": null,
+                "image-caption": null,
+                "sources": null
+            },
+            {
+                "title": "placeholder4",
+                "date": "1-1-1",
+                "type": "medium",
+                "description": "none",
+                "image-src": null,
+                "image-caption": null,
+                "sources": null
+            },
+            {
+                "title": "placeholder4",
+                "date": "1-1-1",
+                "type": "medium",
+                "description": "none",
+                "image-src": null,
+                "image-caption": null,
+                "sources": null
+            },
+            {
+                "title": "placeholder4",
+                "date": "1-1-1",
+                "type": "medium",
+                "description": "none",
+                "image-src": null,
+                "image-caption": null,
+                "sources": null
+            }
+        ]
+    },
+    {
+        "year": "2026 CE",
+        "events": [
+            {
+                "title": "placeholder1",
+                "date": "2026-10-24",
+                "type": "minor",
+                "description": "none",
+                "image-src": null,
+                "image-caption": null,
+                "sources": null
+            },
+            {
+                "title": "placeholder2",
+                "date": "2026-5-6",
+                "type": "major",
+                "description": "none",
+                "image-src": null,
+                "image-caption": null,
+                "sources": null
+            }
+        ]
+    }
+]
