@@ -1,48 +1,1355 @@
 [
     {
-        "year": "0 CE",
+        "year": "13799620000 BCE",
         "events": [
             {
-                "title": "placeholder3",
-                "date": "0-0-0",
+                "title": "First Atoms Form",
+                "date": "-13799620000-01-01",
+                "type": "major",
+                "description": "About 380,000 years after the Big Bang, the universe cools enough for neutral atoms to form.",
+                "image-src": null,
+                "image-caption": null,
+                "sources": null
+            }
+        ]
+    },
+    {
+        "year": "13600000000 BCE",
+        "events": [
+            {
+                "title": "First Stars",
+                "date": "-13600000000-01-01",
                 "type": "gigantic",
-                "description": "none",
+                "description": "The first generations of stars ignite, beginning stellar production of heavier elements.",
+                "image-src": null,
+                "image-caption": null,
+                "sources": null
+            }
+        ]
+    },
+    {
+        "year": "13400000000 BCE",
+        "events": [
+            {
+                "title": "First Galaxies",
+                "date": "-13400000000-01-01",
+                "type": "major",
+                "description": "Early galaxies assemble from stars, gas, and dark matter.",
+                "image-src": null,
+                "image-caption": null,
+                "sources": null
+            }
+        ]
+    },
+    {
+        "year": "4600000000 BCE",
+        "events": [
+            {
+                "title": "Solar System Forms",
+                "date": "-4600000000-01-01",
+                "type": "gigantic",
+                "description": "The Sun and planets begin forming from a collapsing cloud of gas and dust.",
+                "image-src": null,
+                "image-caption": null,
+                "sources": null
+            }
+        ]
+    },
+    {
+        "year": "4540000000 BCE",
+        "events": [
+            {
+                "title": "Earth Forms",
+                "date": "-4540000000-01-01",
+                "type": "gigantic",
+                "description": "Earth accretes from material orbiting the young Sun.",
+                "image-src": null,
+                "image-caption": null,
+                "sources": null
+            }
+        ]
+    },
+    {
+        "year": "4510000000 BCE",
+        "events": [
+            {
+                "title": "Moon Forms",
+                "date": "-4510000000-01-01",
+                "type": "major",
+                "description": "A giant impact likely produces the debris that becomes the Moon.",
+                "image-src": null,
+                "image-caption": null,
+                "sources": null
+            }
+        ]
+    },
+    {
+        "year": "3700000000 BCE",
+        "events": [
+            {
+                "title": "Earliest Evidence of Life",
+                "date": "-3700000000-01-01",
+                "type": "gigantic",
+                "description": "Possible microbial traces indicate life emerged on Earth billions of years ago; exact timing is debated.",
+                "image-src": null,
+                "image-caption": null,
+                "sources": null
+            }
+        ]
+    },
+    {
+        "year": "2700000000 BCE",
+        "events": [
+            {
+                "title": "Oxygenic Photosynthesis Evolves",
+                "date": "-2700000000-01-01",
+                "type": "major",
+                "description": "Cyanobacteria and their ancestors begin producing oxygen through photosynthesis.",
+                "image-src": null,
+                "image-caption": null,
+                "sources": null
+            }
+        ]
+    },
+    {
+        "year": "2400000000 BCE",
+        "events": [
+            {
+                "title": "Great Oxidation Event",
+                "date": "-2400000000-01-01",
+                "type": "gigantic",
+                "description": "Atmospheric oxygen rises substantially, transforming Earth chemistry.",
+                "image-src": null,
+                "image-caption": null,
+                "sources": null
+            }
+        ]
+    },
+    {
+        "year": "1800000000 BCE",
+        "events": [
+            {
+                "title": "Complex Cells Emerge",
+                "date": "-1800000000-01-01",
+                "type": "gigantic",
+                "description": "Eukaryotic cells with internal compartments arise during the Proterozoic.",
+                "image-src": null,
+                "image-caption": null,
+                "sources": null
+            }
+        ]
+    },
+    {
+        "year": "1000000000 BCE",
+        "events": [
+            {
+                "title": "Multicellular Life Expands",
+                "date": "-1000000000-01-01",
+                "type": "major",
+                "description": "Complex multicellular organisms diversify over a long evolutionary interval.",
+                "image-src": null,
+                "image-caption": null,
+                "sources": null
+            }
+        ]
+    },
+    {
+        "year": "635000000 BCE",
+        "events": [
+            {
+                "title": "Ediacaran Period Begins",
+                "date": "-635000000-01-01",
+                "type": "major",
+                "description": "The Ediacaran period marks the rise of distinctive large, soft-bodied organisms.",
+                "image-src": null,
+                "image-caption": null,
+                "sources": null
+            }
+        ]
+    },
+    {
+        "year": "541000000 BCE",
+        "events": [
+            {
+                "title": "Cambrian Explosion",
+                "date": "-541000000-01-01",
+                "type": "gigantic",
+                "description": "Animal diversity and recognizable body plans increase rapidly in the geological record.",
+                "image-src": null,
+                "image-caption": null,
+                "sources": null
+            }
+        ]
+    },
+    {
+        "year": "470000000 BCE",
+        "events": [
+            {
+                "title": "Plants Colonize Land",
+                "date": "-470000000-01-01",
+                "type": "major",
+                "description": "Early land plants begin transforming terrestrial environments.",
+                "image-src": null,
+                "image-caption": null,
+                "sources": null
+            }
+        ]
+    },
+    {
+        "year": "375000000 BCE",
+        "events": [
+            {
+                "title": "First Tetrapods",
+                "date": "-375000000-01-01",
+                "type": "major",
+                "description": "Vertebrates with limbs evolve from fish-like ancestors.",
+                "image-src": null,
+                "image-caption": null,
+                "sources": null
+            }
+        ]
+    },
+    {
+        "year": "252000000 BCE",
+        "events": [
+            {
+                "title": "Permian Mass Extinction",
+                "date": "-252000000-01-01",
+                "type": "gigantic",
+                "description": "Earth experiences its most severe known mass extinction.",
+                "image-src": null,
+                "image-caption": null,
+                "sources": null
+            }
+        ]
+    },
+    {
+        "year": "230000000 BCE",
+        "events": [
+            {
+                "title": "Dinosaurs Emerge",
+                "date": "-230000000-01-01",
+                "type": "major",
+                "description": "The first dinosaurs appear in the Late Triassic.",
+                "image-src": null,
+                "image-caption": null,
+                "sources": null
+            }
+        ]
+    },
+    {
+        "year": "200000000 BCE",
+        "events": [
+            {
+                "title": "Early Mammals",
+                "date": "-200000000-01-01",
+                "type": "major",
+                "description": "Early true mammals emerge during the Mesozoic Era.",
+                "image-src": null,
+                "image-caption": null,
+                "sources": null
+            }
+        ]
+    },
+    {
+        "year": "150000000 BCE",
+        "events": [
+            {
+                "title": "Early Birds",
+                "date": "-150000000-01-01",
+                "type": "major",
+                "description": "Bird-like dinosaurs such as Archaeopteryx appear.",
+                "image-src": null,
+                "image-caption": null,
+                "sources": null
+            }
+        ]
+    },
+    {
+        "year": "140000000 BCE",
+        "events": [
+            {
+                "title": "Flowering Plants Emerge",
+                "date": "-140000000-01-01",
+                "type": "major",
+                "description": "Angiosperms originate and later spread across terrestrial ecosystems.",
+                "image-src": null,
+                "image-caption": null,
+                "sources": null
+            }
+        ]
+    },
+    {
+        "year": "66000000 BCE",
+        "events": [
+            {
+                "title": "Asteroid Impact and K–Pg Extinction",
+                "date": "-66000000-01-01",
+                "type": "gigantic",
+                "description": "An impact and associated global changes eliminate non-avian dinosaurs and many other species.",
+                "image-src": null,
+                "image-caption": null,
+                "sources": null
+            }
+        ]
+    },
+    {
+        "year": "7000000 BCE",
+        "events": [
+            {
+                "title": "Earliest Hominins",
+                "date": "-7000000-01-01",
+                "type": "major",
+                "description": "Early members of the human evolutionary lineage appear in Africa.",
+                "image-src": null,
+                "image-caption": null,
+                "sources": null
+            }
+        ]
+    },
+    {
+        "year": "3300000 BCE",
+        "events": [
+            {
+                "title": "Earliest Known Stone Tools",
+                "date": "-3300000-01-01",
+                "type": "major",
+                "description": "Stone tools from Lomekwi, Kenya, predate the genus Homo.",
+                "image-src": null,
+                "image-caption": null,
+                "sources": null
+            }
+        ]
+    },
+    {
+        "year": "2800000 BCE",
+        "events": [
+            {
+                "title": "Genus Homo Emerges",
+                "date": "-2800000-01-01",
+                "type": "major",
+                "description": "Early fossils attributed to Homo date to roughly 2.8 million years ago.",
+                "image-src": null,
+                "image-caption": null,
+                "sources": null
+            }
+        ]
+    },
+    {
+        "year": "1800000 BCE",
+        "events": [
+            {
+                "title": "Early Humans Leave Africa",
+                "date": "-1800000-01-01",
+                "type": "major",
+                "description": "Early Homo populations expand into Eurasia.",
+                "image-src": null,
+                "image-caption": null,
+                "sources": null
+            }
+        ]
+    },
+    {
+        "year": "300000 BCE",
+        "events": [
+            {
+                "title": "Homo sapiens Emerges",
+                "date": "-300000-01-01",
+                "type": "gigantic",
+                "description": "Our species evolves in Africa approximately 300,000 years ago.",
+                "image-src": null,
+                "image-caption": null,
+                "sources": null
+            }
+        ]
+    },
+    {
+        "year": "70000 BCE",
+        "events": [
+            {
+                "title": "Major Human Dispersals",
+                "date": "-70000-01-01",
+                "type": "major",
+                "description": "Homo sapiens populations spread widely beyond Africa over many millennia.",
+                "image-src": null,
+                "image-caption": null,
+                "sources": null
+            }
+        ]
+    },
+    {
+        "year": "40000 BCE",
+        "events": [
+            {
+                "title": "Figurative Cave Art Flourishes",
+                "date": "-40000-01-01",
+                "type": "major",
+                "description": "Sophisticated cave paintings and portable art become prominent in the archaeological record.",
+                "image-src": null,
+                "image-caption": null,
+                "sources": null
+            }
+        ]
+    },
+    {
+        "year": "12000 BCE",
+        "events": [
+            {
+                "title": "End of the Last Ice Age Approaches",
+                "date": "-12000-01-01",
+                "type": "major",
+                "description": "Late-glacial warming reshapes ecosystems and human environments.",
+                "image-src": null,
+                "image-caption": null,
+                "sources": null
+            }
+        ]
+    },
+    {
+        "year": "10000 BCE",
+        "events": [
+            {
+                "title": "Agricultural Revolution",
+                "date": "-10000-01-01",
+                "type": "gigantic",
+                "description": "Farming and animal domestication emerge in several regions over thousands of years.",
+                "image-src": null,
+                "image-caption": null,
+                "sources": null
+            }
+        ]
+    },
+    {
+        "year": "4000 BCE",
+        "events": [
+            {
+                "title": "Early Urban Civilizations",
+                "date": "-4000-01-01",
+                "type": "gigantic",
+                "description": "Increasingly complex urban societies develop in Mesopotamia.",
+                "image-src": null,
+                "image-caption": null,
+                "sources": null
+            }
+        ]
+    },
+    {
+        "year": "3500 BCE",
+        "events": [
+            {
+                "title": "The Wheel Develops",
+                "date": "-3500-01-01",
+                "type": "major",
+                "description": "Wheeled vehicles appear in Eurasia around the fourth millennium BCE.",
+                "image-src": null,
+                "image-caption": null,
+                "sources": null
+            }
+        ]
+    },
+    {
+        "year": "3400 BCE",
+        "events": [
+            {
+                "title": "Writing Emerges",
+                "date": "-3400-01-01",
+                "type": "gigantic",
+                "description": "The earliest writing systems develop in Mesopotamia, followed by others elsewhere.",
+                "image-src": null,
+                "image-caption": null,
+                "sources": null
+            }
+        ]
+    },
+    {
+        "year": "3100 BCE",
+        "events": [
+            {
+                "title": "Unification of Ancient Egypt",
+                "date": "-3100-01-01",
+                "type": "major",
+                "description": "Early dynastic rulers consolidate a unified Egyptian state.",
+                "image-src": null,
+                "image-caption": null,
+                "sources": null
+            }
+        ]
+    },
+    {
+        "year": "2600 BCE",
+        "events": [
+            {
+                "title": "Great Pyramid of Giza Built",
+                "date": "-2600-01-01",
+                "type": "major",
+                "description": "Egyptian builders construct the Great Pyramid during the Fourth Dynasty.",
+                "image-src": null,
+                "image-caption": null,
+                "sources": null
+            }
+        ]
+    },
+    {
+        "year": "2500 BCE",
+        "events": [
+            {
+                "title": "Indus Valley Cities Flourish",
+                "date": "-2500-01-01",
+                "type": "major",
+                "description": "Harappa and Mohenjo-daro form part of an extensive urban civilization.",
+                "image-src": null,
+                "image-caption": null,
+                "sources": null
+            }
+        ]
+    },
+    {
+        "year": "1750 BCE",
+        "events": [
+            {
+                "title": "Code of Hammurabi",
+                "date": "-1750-01-01",
+                "type": "major",
+                "description": "Babylonian king Hammurabi issues a famous collection of laws.",
+                "image-src": null,
+                "image-caption": null,
+                "sources": null
+            }
+        ]
+    },
+    {
+        "year": "1200 BCE",
+        "events": [
+            {
+                "title": "Late Bronze Age Collapse",
+                "date": "-1200-01-01",
+                "type": "major",
+                "description": "Major eastern Mediterranean states and trading systems destabilize.",
+                "image-src": null,
+                "image-caption": null,
+                "sources": null
+            }
+        ]
+    },
+    {
+        "year": "800 BCE",
+        "events": [
+            {
+                "title": "Greek City-States Rise",
+                "date": "-0800-01-01",
+                "type": "major",
+                "description": "Greek poleis expand in influence during the Archaic period.",
+                "image-src": null,
+                "image-caption": null,
+                "sources": null
+            }
+        ]
+    },
+    {
+        "year": "551 BCE",
+        "events": [
+            {
+                "title": "Birth of Confucius",
+                "date": "-0551-01-01",
+                "type": "major",
+                "description": "Confucius is traditionally dated to 551 BCE and becomes profoundly influential in Chinese thought.",
+                "image-src": null,
+                "image-caption": null,
+                "sources": null
+            }
+        ]
+    },
+    {
+        "year": "334 BCE",
+        "events": [
+            {
+                "title": "Alexander Begins Persian Campaign",
+                "date": "-0334-01-01",
+                "type": "major",
+                "description": "Alexander the Great launches his conquest of the Achaemenid Empire.",
+                "image-src": null,
+                "image-caption": null,
+                "sources": null
+            }
+        ]
+    },
+    {
+        "year": "221 BCE",
+        "events": [
+            {
+                "title": "China Unified Under Qin",
+                "date": "-0221-01-01",
+                "type": "gigantic",
+                "description": "Qin Shi Huang unifies major warring states under the Qin dynasty.",
+                "image-src": null,
+                "image-caption": null,
+                "sources": null
+            }
+        ]
+    },
+    {
+        "year": "27 BCE",
+        "events": [
+            {
+                "title": "Roman Empire Begins",
+                "date": "-0027-01-01",
+                "type": "gigantic",
+                "description": "Octavian receives the title Augustus, marking the start of imperial rule.",
+                "image-src": null,
+                "image-caption": null,
+                "sources": null
+            }
+        ]
+    },
+    {
+        "year": "1 CE",
+        "events": [
+            {
+                "title": "Common Era Year One",
+                "date": "0001-01-01",
+                "type": "medium",
+                "description": "Year 1 CE begins the conventional Common Era numbering system; there is no year zero in this calendar.",
+                "image-src": null,
+                "image-caption": null,
+                "sources": null
+            }
+        ]
+    },
+    {
+        "year": "105 CE",
+        "events": [
+            {
+                "title": "Paper-Making Improved in China",
+                "date": "0105-01-01",
+                "type": "major",
+                "description": "Cai Lun is traditionally credited with improving paper-making methods.",
+                "image-src": null,
+                "image-caption": null,
+                "sources": null
+            }
+        ]
+    },
+    {
+        "year": "313 CE",
+        "events": [
+            {
+                "title": "Edict of Milan",
+                "date": "0313-01-01",
+                "type": "major",
+                "description": "Roman emperors Constantine and Licinius proclaim religious toleration.",
+                "image-src": null,
+                "image-caption": null,
+                "sources": null
+            }
+        ]
+    },
+    {
+        "year": "476 CE",
+        "events": [
+            {
+                "title": "Western Roman Empire Falls",
+                "date": "0476-09-04",
+                "type": "gigantic",
+                "description": "Romulus Augustulus is deposed, a conventional marker for the end of the Western Roman Empire.",
+                "image-src": null,
+                "image-caption": null,
+                "sources": null
+            }
+        ]
+    },
+    {
+        "year": "622 CE",
+        "events": [
+            {
+                "title": "Beginning of Islamic Calendar",
+                "date": "0622-07-16",
+                "type": "gigantic",
+                "description": "The Hijra, Muhammad’s migration to Medina, anchors the Islamic calendar; July 16 is the conventional epoch date.",
+                "image-src": null,
+                "image-caption": null,
+                "sources": null
+            }
+        ]
+    },
+    {
+        "year": "800 CE",
+        "events": [
+            {
+                "title": "Charlemagne Crowned Emperor",
+                "date": "0800-12-25",
+                "type": "major",
+                "description": "Pope Leo III crowns Charlemagne in Rome.",
+                "image-src": null,
+                "image-caption": null,
+                "sources": null
+            }
+        ]
+    },
+    {
+        "year": "1066 CE",
+        "events": [
+            {
+                "title": "Battle of Hastings",
+                "date": "1066-10-14",
+                "type": "major",
+                "description": "William of Normandy defeats Harold II and subsequently conquers England.",
+                "image-src": null,
+                "image-caption": null,
+                "sources": null
+            }
+        ]
+    },
+    {
+        "year": "1206 CE",
+        "events": [
+            {
+                "title": "Mongol Empire Founded",
+                "date": "1206-01-01",
+                "type": "gigantic",
+                "description": "Temüjin becomes Genghis Khan and establishes the Mongol Empire.",
+                "image-src": null,
+                "image-caption": null,
+                "sources": null
+            }
+        ]
+    },
+    {
+        "year": "1215 CE",
+        "events": [
+            {
+                "title": "Magna Carta Sealed",
+                "date": "1215-06-15",
+                "type": "major",
+                "description": "King John accepts a charter limiting royal power in certain respects.",
+                "image-src": null,
+                "image-caption": null,
+                "sources": null
+            }
+        ]
+    },
+    {
+        "year": "1347 CE",
+        "events": [
+            {
+                "title": "Black Death Reaches Europe",
+                "date": "1347-01-01",
+                "type": "gigantic",
+                "description": "Plague spreads across Europe, killing a very large share of its population.",
+                "image-src": null,
+                "image-caption": null,
+                "sources": null
+            }
+        ]
+    },
+    {
+        "year": "1450 CE",
+        "events": [
+            {
+                "title": "European Printing Revolution",
+                "date": "1450-01-01",
+                "type": "gigantic",
+                "description": "Gutenberg’s movable metal type printing methods transform book production.",
+                "image-src": null,
+                "image-caption": null,
+                "sources": null
+            }
+        ]
+    },
+    {
+        "year": "1453 CE",
+        "events": [
+            {
+                "title": "Fall of Constantinople",
+                "date": "1453-05-29",
+                "type": "major",
+                "description": "Ottoman forces capture Constantinople, ending the Byzantine Empire.",
+                "image-src": null,
+                "image-caption": null,
+                "sources": null
+            }
+        ]
+    },
+    {
+        "year": "1492 CE",
+        "events": [
+            {
+                "title": "Columbus Reaches the Caribbean",
+                "date": "1492-10-12",
+                "type": "gigantic",
+                "description": "Columbus’s voyage initiates sustained transatlantic contact and European colonization.",
+                "image-src": null,
+                "image-caption": null,
+                "sources": null
+            }
+        ]
+    },
+    {
+        "year": "1517 CE",
+        "events": [
+            {
+                "title": "Protestant Reformation Begins",
+                "date": "1517-10-31",
+                "type": "gigantic",
+                "description": "Martin Luther’s Ninety-Five Theses become a symbol of the Reformation.",
+                "image-src": null,
+                "image-caption": null,
+                "sources": null
+            }
+        ]
+    },
+    {
+        "year": "1543 CE",
+        "events": [
+            {
+                "title": "Copernicus Publishes Heliocentric Model",
+                "date": "1543-01-01",
+                "type": "major",
+                "description": "On the Revolutions of the Heavenly Spheres argues for a Sun-centered planetary system.",
+                "image-src": null,
+                "image-caption": null,
+                "sources": null
+            }
+        ]
+    },
+    {
+        "year": "1609 CE",
+        "events": [
+            {
+                "title": "Galileo Observes the Sky with a Telescope",
+                "date": "1609-01-01",
+                "type": "major",
+                "description": "Telescopic astronomy reveals new evidence about the Moon, planets, and stars.",
+                "image-src": null,
+                "image-caption": null,
+                "sources": null
+            }
+        ]
+    },
+    {
+        "year": "1687 CE",
+        "events": [
+            {
+                "title": "Newton Publishes Principia",
+                "date": "1687-07-05",
+                "type": "gigantic",
+                "description": "Newton describes laws of motion and universal gravitation.",
+                "image-src": null,
+                "image-caption": null,
+                "sources": null
+            }
+        ]
+    },
+    {
+        "year": "1760 CE",
+        "events": [
+            {
+                "title": "Industrial Revolution Begins",
+                "date": "1760-01-01",
+                "type": "gigantic",
+                "description": "Mechanized production and fossil-fuel-powered industry take off in Britain; timing is approximate.",
+                "image-src": null,
+                "image-caption": null,
+                "sources": null
+            }
+        ]
+    },
+    {
+        "year": "1776 CE",
+        "events": [
+            {
+                "title": "U.S. Declaration of Independence",
+                "date": "1776-07-04",
+                "type": "major",
+                "description": "The Continental Congress adopts the Declaration of Independence.",
+                "image-src": null,
+                "image-caption": null,
+                "sources": null
+            }
+        ]
+    },
+    {
+        "year": "1789 CE",
+        "events": [
+            {
+                "title": "French Revolution",
+                "date": "1789-07-14",
+                "type": "gigantic",
+                "description": "The storming of the Bastille symbolizes a revolution in French political life.",
+                "image-src": null,
+                "image-caption": null,
+                "sources": null
+            }
+        ]
+    },
+    {
+        "year": "1796 CE",
+        "events": [
+            {
+                "title": "First Smallpox Vaccination",
+                "date": "1796-05-14",
+                "type": "major",
+                "description": "Edward Jenner carries out his famous cowpox inoculation experiment.",
+                "image-src": null,
+                "image-caption": null,
+                "sources": null
+            }
+        ]
+    },
+    {
+        "year": "1804 CE",
+        "events": [
+            {
+                "title": "Haiti Declares Independence",
+                "date": "1804-01-01",
+                "type": "major",
+                "description": "Haiti becomes an independent state after a successful revolution against slavery and colonial rule.",
+                "image-src": null,
+                "image-caption": null,
+                "sources": null
+            }
+        ]
+    },
+    {
+        "year": "1859 CE",
+        "events": [
+            {
+                "title": "Darwin Publishes On the Origin of Species",
+                "date": "1859-11-24",
+                "type": "gigantic",
+                "description": "Charles Darwin presents evolution by natural selection in a landmark book.",
+                "image-src": null,
+                "image-caption": null,
+                "sources": null
+            }
+        ]
+    },
+    {
+        "year": "1865 CE",
+        "events": [
+            {
+                "title": "American Civil War Ends",
+                "date": "1865-04-09",
+                "type": "major",
+                "description": "Robert E. Lee surrenders at Appomattox, signaling the effective end of the American Civil War.",
+                "image-src": null,
+                "image-caption": null,
+                "sources": null
+            }
+        ]
+    },
+    {
+        "year": "1869 CE",
+        "events": [
+            {
+                "title": "Periodic Table Published",
+                "date": "1869-01-01",
+                "type": "major",
+                "description": "Dmitri Mendeleev organizes chemical elements by recurring properties.",
+                "image-src": null,
+                "image-caption": null,
+                "sources": null
+            }
+        ]
+    },
+    {
+        "year": "1876 CE",
+        "events": [
+            {
+                "title": "First Successful Telephone Call",
+                "date": "1876-03-10",
+                "type": "major",
+                "description": "Alexander Graham Bell and Thomas Watson demonstrate intelligible speech by telephone.",
+                "image-src": null,
+                "image-caption": null,
+                "sources": null
+            }
+        ]
+    },
+    {
+        "year": "1903 CE",
+        "events": [
+            {
+                "title": "First Powered Airplane Flight",
+                "date": "1903-12-17",
+                "type": "gigantic",
+                "description": "The Wright brothers achieve sustained controlled powered flight.",
+                "image-src": null,
+                "image-caption": null,
+                "sources": null
+            }
+        ]
+    },
+    {
+        "year": "1905 CE",
+        "events": [
+            {
+                "title": "Einstein’s Annus Mirabilis",
+                "date": "1905-01-01",
+                "type": "major",
+                "description": "Albert Einstein publishes foundational papers on relativity, Brownian motion, and the photoelectric effect.",
+                "image-src": null,
+                "image-caption": null,
+                "sources": null
+            }
+        ]
+    },
+    {
+        "year": "1914 CE",
+        "events": [
+            {
+                "title": "World War I Begins",
+                "date": "1914-07-28",
+                "type": "gigantic",
+                "description": "Austria-Hungary declares war on Serbia as a European crisis escalates into global war.",
+                "image-src": null,
+                "image-caption": null,
+                "sources": null
+            }
+        ]
+    },
+    {
+        "year": "1917 CE",
+        "events": [
+            {
+                "title": "Russian October Revolution",
+                "date": "1917-11-07",
+                "type": "major",
+                "description": "Bolsheviks seize power in Petrograd (October 25 on the Julian calendar).",
+                "image-src": null,
+                "image-caption": null,
+                "sources": null
+            }
+        ]
+    },
+    {
+        "year": "1918 CE",
+        "events": [
+            {
+                "title": "Influenza Pandemic",
+                "date": "1918-01-01",
+                "type": "gigantic",
+                "description": "A devastating influenza pandemic spreads worldwide during 1918–1920.",
+                "image-src": null,
+                "image-caption": null,
+                "sources": null
+            }
+        ]
+    },
+    {
+        "year": "1928 CE",
+        "events": [
+            {
+                "title": "Penicillin Discovered",
+                "date": "1928-09-28",
+                "type": "major",
+                "description": "Alexander Fleming observes the antibacterial effect of Penicillium mold.",
+                "image-src": null,
+                "image-caption": null,
+                "sources": null
+            }
+        ]
+    },
+    {
+        "year": "1929 CE",
+        "events": [
+            {
+                "title": "Wall Street Crash",
+                "date": "1929-10-29",
+                "type": "major",
+                "description": "A major stock market crash accelerates a global economic crisis.",
+                "image-src": null,
+                "image-caption": null,
+                "sources": null
+            }
+        ]
+    },
+    {
+        "year": "1939 CE",
+        "events": [
+            {
+                "title": "World War II Begins in Europe",
+                "date": "1939-09-01",
+                "type": "gigantic",
+                "description": "Germany invades Poland, prompting Britain and France to declare war.",
+                "image-src": null,
+                "image-caption": null,
+                "sources": null
+            }
+        ]
+    },
+    {
+        "year": "1945 CE",
+        "events": [
+            {
+                "title": "Atomic Bombing of Hiroshima",
+                "date": "1945-08-06",
+                "type": "gigantic",
+                "description": "The United States drops an atomic bomb on Hiroshima, ushering in the nuclear age.",
                 "image-src": null,
                 "image-caption": null,
                 "sources": null
             },
             {
-                "title": "placeholder4",
-                "date": "1-1-1",
-                "type": "medium",
-                "description": "none",
+                "title": "United Nations Founded",
+                "date": "1945-10-24",
+                "type": "major",
+                "description": "The UN Charter enters into force following World War II.",
+                "image-src": null,
+                "image-caption": null,
+                "sources": null
+            }
+        ]
+    },
+    {
+        "year": "1947 CE",
+        "events": [
+            {
+                "title": "Partition and Independence of India",
+                "date": "1947-08-15",
+                "type": "gigantic",
+                "description": "British India is partitioned into India and Pakistan amid mass displacement and violence.",
+                "image-src": null,
+                "image-caption": null,
+                "sources": null
+            }
+        ]
+    },
+    {
+        "year": "1948 CE",
+        "events": [
+            {
+                "title": "Universal Declaration of Human Rights",
+                "date": "1948-12-10",
+                "type": "major",
+                "description": "The UN General Assembly adopts a foundational global human rights declaration.",
+                "image-src": null,
+                "image-caption": null,
+                "sources": null
+            }
+        ]
+    },
+    {
+        "year": "1953 CE",
+        "events": [
+            {
+                "title": "DNA Double Helix Described",
+                "date": "1953-04-25",
+                "type": "major",
+                "description": "Watson and Crick publish a model of DNA structure informed by key experimental work.",
+                "image-src": null,
+                "image-caption": null,
+                "sources": null
+            }
+        ]
+    },
+    {
+        "year": "1957 CE",
+        "events": [
+            {
+                "title": "Sputnik 1 Launched",
+                "date": "1957-10-04",
+                "type": "gigantic",
+                "description": "The Soviet Union launches the first artificial Earth satellite.",
+                "image-src": null,
+                "image-caption": null,
+                "sources": null
+            }
+        ]
+    },
+    {
+        "year": "1969 CE",
+        "events": [
+            {
+                "title": "First Moon Landing",
+                "date": "1969-07-20",
+                "type": "gigantic",
+                "description": "Apollo 11 astronauts land on the Moon.",
+                "image-src": null,
+                "image-caption": null,
+                "sources": null
+            }
+        ]
+    },
+    {
+        "year": "1989 CE",
+        "events": [
+            {
+                "title": "Berlin Wall Opens",
+                "date": "1989-11-09",
+                "type": "gigantic",
+                "description": "Border crossings open, symbolizing the collapse of communist regimes in Eastern Europe.",
+                "image-src": null,
+                "image-caption": null,
+                "sources": null
+            }
+        ]
+    },
+    {
+        "year": "1991 CE",
+        "events": [
+            {
+                "title": "World Wide Web Goes Public",
+                "date": "1991-08-06",
+                "type": "gigantic",
+                "description": "Tim Berners-Lee announces the World Wide Web project publicly.",
                 "image-src": null,
                 "image-caption": null,
                 "sources": null
             },
             {
-                "title": "placeholder4",
-                "date": "1-1-1",
-                "type": "medium",
-                "description": "none",
+                "title": "Soviet Union Dissolves",
+                "date": "1991-12-26",
+                "type": "gigantic",
+                "description": "The Soviet Union formally ceases to exist.",
+                "image-src": null,
+                "image-caption": null,
+                "sources": null
+            }
+        ]
+    },
+    {
+        "year": "2001 CE",
+        "events": [
+            {
+                "title": "September 11 Attacks",
+                "date": "2001-09-11",
+                "type": "gigantic",
+                "description": "Coordinated terrorist attacks kill nearly 3,000 people in the United States.",
+                "image-src": null,
+                "image-caption": null,
+                "sources": null
+            }
+        ]
+    },
+    {
+        "year": "2003 CE",
+        "events": [
+            {
+                "title": "Human Genome Project Completed",
+                "date": "2003-04-14",
+                "type": "major",
+                "description": "The international project announces completion of its reference human genome sequencing effort.",
+                "image-src": null,
+                "image-caption": null,
+                "sources": null
+            }
+        ]
+    },
+    {
+        "year": "2007 CE",
+        "events": [
+            {
+                "title": "iPhone Introduced",
+                "date": "2007-01-09",
+                "type": "major",
+                "description": "Apple unveils the iPhone, accelerating the smartphone era.",
+                "image-src": null,
+                "image-caption": null,
+                "sources": null
+            }
+        ]
+    },
+    {
+        "year": "2008 CE",
+        "events": [
+            {
+                "title": "Global Financial Crisis Intensifies",
+                "date": "2008-09-15",
+                "type": "gigantic",
+                "description": "Lehman Brothers files for bankruptcy amid a worldwide financial emergency.",
+                "image-src": null,
+                "image-caption": null,
+                "sources": null
+            }
+        ]
+    },
+    {
+        "year": "2012 CE",
+        "events": [
+            {
+                "title": "Higgs Boson Discovery Announced",
+                "date": "2012-07-04",
+                "type": "major",
+                "description": "CERN researchers announce evidence for a Higgs boson.",
+                "image-src": null,
+                "image-caption": null,
+                "sources": null
+            }
+        ]
+    },
+    {
+        "year": "2015 CE",
+        "events": [
+            {
+                "title": "Paris Climate Agreement Adopted",
+                "date": "2015-12-12",
+                "type": "major",
+                "description": "Countries adopt a global agreement on climate change.",
+                "image-src": null,
+                "image-caption": null,
+                "sources": null
+            }
+        ]
+    },
+    {
+        "year": "2020 CE",
+        "events": [
+            {
+                "title": "COVID-19 Declared a Pandemic",
+                "date": "2020-03-11",
+                "type": "gigantic",
+                "description": "The World Health Organization characterizes COVID-19 as a pandemic.",
+                "image-src": null,
+                "image-caption": null,
+                "sources": null
+            }
+        ]
+    },
+    {
+        "year": "2022 CE",
+        "events": [
+            {
+                "title": "Russia Invades Ukraine",
+                "date": "2022-02-24",
+                "type": "gigantic",
+                "description": "Russia launches a full-scale invasion of Ukraine.",
                 "image-src": null,
                 "image-caption": null,
                 "sources": null
             },
             {
-                "title": "placeholder4",
-                "date": "1-1-1",
-                "type": "medium",
-                "description": "none",
+                "title": "ChatGPT Released",
+                "date": "2022-11-30",
+                "type": "major",
+                "description": "OpenAI publicly releases ChatGPT, accelerating public adoption of generative AI.",
                 "image-src": null,
                 "image-caption": null,
                 "sources": null
-            },
+            }
+        ]
+    },
+    {
+        "year": "2023 CE",
+        "events": [
             {
-                "title": "placeholder4",
-                "date": "1-1-1",
-                "type": "medium",
-                "description": "none",
+                "title": "Israel–Hamas War Begins",
+                "date": "2023-10-07",
+                "type": "gigantic",
+                "description": "Hamas-led attacks on Israel are followed by a devastating war in Gaza.",
+                "image-src": null,
+                "image-caption": null,
+                "sources": null
+            }
+        ]
+    },
+    {
+        "year": "2024 CE",
+        "events": [
+            {
+                "title": "First Samples Returned from Moon’s Far Side",
+                "date": "2024-06-25",
+                "type": "major",
+                "description": "China’s Chang’e 6 mission returns the first samples collected from the lunar far side.",
                 "image-src": null,
                 "image-caption": null,
                 "sources": null
@@ -53,19 +1360,10 @@
         "year": "2026 CE",
         "events": [
             {
-                "title": "placeholder1",
-                "date": "2026-10-24",
+                "title": "Present Day",
+                "date": "2026-10-25",
                 "type": "minor",
-                "description": "none",
-                "image-src": null,
-                "image-caption": null,
-                "sources": null
-            },
-            {
-                "title": "placeholder2",
-                "date": "2026-5-6",
-                "type": "major",
-                "description": "none",
+                "description": "The timeline reaches October 25, 2026; this is a timeline endpoint, not a historical discovery.",
                 "image-src": null,
                 "image-caption": null,
                 "sources": null
