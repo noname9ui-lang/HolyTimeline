@@ -46,11 +46,55 @@ function setupInfoPanel(infoPanel, clickBlocker) {
             sidebarState = !sidebarState
         }, {once: true});
     })
+
+    
+    const searchInput = infoPanel.querySelector("#info-panel-search-bar-input");
+    const shortcuts = [...infoPanel.querySelectorAll(".info-panel-shortcut")];
+    const articles = [...infoPanel.querySelectorAll(".info-panel-article")];
+
+    function filterArticles() {
+        const query = searchInput.value.trim().toLowerCase();
+
+        shortcuts.forEach(shortcut => {
+            const button = shortcut.querySelector(".info-panel-shortcut-button");
+            const index = Number(button.dataset.index);
+
+            const title = button.textContent.toLowerCase();
+            const description = articles[index]?.textContent.toLowerCase() ?? "";
+
+            const matches = title.includes(query) || description.includes(query);
+
+            shortcut.style.display = matches ? "" : "none";
+        });
+    }
+
+    // Search instantly while typing
+    searchInput.addEventListener("input", filterArticles);
+
+    // Keyboard shortcuts
+    searchInput.addEventListener("keydown", (e) => {
+        if (e.key === "Enter") {
+            e.preventDefault();
+
+            const firstMatch = shortcuts.find(
+                shortcut => shortcut.style.display !== "none"
+            );
+
+            firstMatch?.querySelector("button")?.click();
+        }
+
+        if (e.key === "Escape") {
+            searchInput.value = "";
+            filterArticles();
+            searchInput.blur();
+        }
+    });
 }
 
 function openInfoPanel(events, id) {
     const clickBlocker = document.createElement("div")
     const infoPanel = document.createElement("div");
+
     clickBlocker.classList = "infoPanelClickBlocker"
     infoPanel.classList = "info-panel glass-card"
     infoPanel.style.display = "flex"
@@ -87,13 +131,19 @@ function openInfoPanel(events, id) {
         </div>
         
         <div class="info-panel-shortcut-wrapper">
-            <div class="info-panel-shortcut">
-                <button class="btn-28 info-panel-shortcut-button">Test Button 1</button>
-            </div>
-            <div class="info-panel-shortcut">
-                <button class="btn-28 info-panel-shortcut-button">Test Button 2</button>
-            </div>
+            ${events.map((event, index) => `
+                <div class="info-panel-shortcut">
+                    <button
+                        class="btn-28 info-panel-shortcut-button"
+                        data-index="${index}"
+                        type="button"
+                    >
+                        ${event.title}
+                    </button>
+                </div>
+            `).join("")}
         </div>
+
     </div>
 
     <div class="exit-info-panel" id="exit-info-panel">
@@ -144,10 +194,36 @@ function openInfoPanel(events, id) {
     </div>
     `
 
+    
     document.body.appendChild(infoPanel);
     document.body.appendChild(clickBlocker);
 
-    setupInfoPanel(infoPanel, clickBlocker)
+    setupInfoPanel(infoPanel, clickBlocker);
+
+    // Connect sidebar buttons to articles
+    const scrollArea = infoPanel.querySelector(".info-panel-articles-wrapper");
+    const articles = infoPanel.querySelectorAll(".info-panel-article");
+    const buttons = infoPanel.querySelectorAll(".info-panel-shortcut-button");
+
+    buttons.forEach(button => {
+        button.addEventListener("click", () => {
+            const index = Number(button.dataset.index);
+            const article = articles[index];
+
+            if (!article) return;
+
+            const top =
+                article.getBoundingClientRect().top
+                - scrollArea.getBoundingClientRect().top
+                + scrollArea.scrollTop
+                - 25;
+
+            scrollArea.scrollTo({
+                top: top,
+                behavior: "smooth"
+            });
+        });
+    });
 }
 
 function animate() {
@@ -315,58 +391,167 @@ function fitTimelineWidth() {
         + parseFloat(style.paddingRight)}px`;
 }
 
+
+
 function initScrollingParticles(id, settings) {
     const host = document.getElementById(id);
-    const viewport = document.createElement("div");
-    viewport.id = `${id}-viewport`;
-    viewport.style.cssText =
-        "position:sticky;left:0;width:100vw;max-width:100%;height:100%;";
-    host.replaceChildren(viewport);
+    host.replaceChildren();
 
-    settings.interactivity.events.resize = false;
-    particlesJS(viewport.id, settings);
-    const particles = window.pJSDom[window.pJSDom.length - 1].pJS;
-    const canvas = particles.canvas.el;
-    canvas.style.pointerEvents = "none";
+    const CHUNK_WIDTH = 800;
+    const BUFFER_SCREENS = 1;
+    const PARTICLE_DENSITY = 65;
+    const MAX_PARTICLE_SIZE = 5;
 
-    particles.fn.vendors.densityAutoParticles = () => {
-        let count = particles.particles.number.value;
-        if (particles.particles.number.density.enable) {
-            let area = particles.canvas.w * particles.canvas.h / 1000;
-            if (particles.tmp.retina) area /= 2 * particles.canvas.pxratio;
-            count = Math.ceil(area * count /
-                particles.particles.number.density.value_area);
-        }
-        const difference = count - particles.particles.array.length;
-        if (difference > 0) particles.fn.modes.pushParticles(difference);
-        else if (difference < 0) particles.fn.modes.removeParticles(-difference);
-    };
+    const chunks = new Map();
+    const color = settings?.particles?.color?.value || "#ffffff";
 
-    function resizeParticles() {
-        particles.fn.retinaInit();
-        const ratio = particles.canvas.pxratio;
-        particles.canvas.w = host.clientWidth * ratio;
-        particles.canvas.h = host.clientHeight * ratio;
-        canvas.width = Math.ceil(viewport.clientWidth * ratio);
-        canvas.height = Math.ceil(viewport.clientHeight * ratio);
-        particles.fn.vendors.densityAutoParticles();
+    let height = host.clientHeight;
+    let dpr = Math.min(window.devicePixelRatio || 1, 1.5);
+    let lastFrame = 0;
+
+    function seededRandom(seed) {
+        let state = seed >>> 0;
+
+        return () => {
+            state = (
+                Math.imul(state, 1664525) + 1013904223
+            ) >>> 0;
+
+            return state / 4294967296;
+        };
     }
 
-    const drawParticles = particles.fn.particlesDraw;
-    particles.fn.particlesDraw = () => {
-        const offset = viewport.getBoundingClientRect().left
-            - host.getBoundingClientRect().left;
-        const ctx = particles.canvas.ctx;
-        ctx.save();
-        ctx.setTransform(1, 0, 0, 1,
-            -offset * particles.canvas.pxratio, 0);
-        drawParticles();
-        ctx.restore();
-    };
+    function createChunk(index) {
+        const canvas = document.createElement("canvas");
 
-    particles.fn.particlesEmpty();
-    resizeParticles();
-    window.addEventListener("resize", resizeParticles);
+        // IMPORTANT: Each canvas is anchored to the timeline.
+        canvas.style.cssText = `
+            position: absolute;
+            left: ${index * CHUNK_WIDTH}px;
+            top: 0;
+            width: ${CHUNK_WIDTH}px;
+            height: 100%;
+            pointer-events: none;
+        `;
+
+        canvas.width = Math.ceil(CHUNK_WIDTH * dpr);
+        canvas.height = Math.ceil(height * dpr);
+
+        const ctx = canvas.getContext("2d");
+        ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+
+        const random = seededRandom(index + 123456);
+
+        const count = Math.round(
+            CHUNK_WIDTH * height *
+            PARTICLE_DENSITY / 1000000
+        );
+
+        const particles = [];
+
+        for (let i = 0; i < count; i++) {
+            particles.push({
+                x: random() * CHUNK_WIDTH,
+                y: random() * height,
+                size: 0.5 + random() * MAX_PARTICLE_SIZE,
+                opacity: 0.15 + random() * 0.3,
+                phase: random() * Math.PI * 2
+            });
+        }
+
+        host.appendChild(canvas);
+        chunks.set(index, { canvas, ctx, particles });
+    }
+
+    function updateChunks() {
+        const hostLeft = host.getBoundingClientRect().left;
+        const buffer = window.innerWidth * BUFFER_SCREENS;
+
+        const totalChunks = Math.max(
+            1,
+            Math.ceil(host.clientWidth / CHUNK_WIDTH)
+        );
+
+        const start = Math.max(
+            0,
+            Math.floor((-hostLeft - buffer) / CHUNK_WIDTH)
+        );
+
+        const end = Math.min(
+            totalChunks - 1,
+            Math.floor(
+                (-hostLeft + window.innerWidth + buffer)
+                / CHUNK_WIDTH
+            )
+        );
+
+        // Spawn nearby chunks
+        for (let i = start; i <= end; i++) {
+            if (!chunks.has(i)) {
+                createChunk(i);
+            }
+        }
+
+        // Despawn distant chunks
+        for (const [index, chunk] of chunks) {
+            if (index < start || index > end) {
+                chunk.canvas.remove();
+                chunks.delete(index);
+            }
+        }
+    }
+
+    function render(time) {
+        // Particle animation at 30 FPS to save resources.
+        // Scrolling itself remains at native browser speed.
+        if (!document.hidden && time - lastFrame >= 1000 / 30) {
+            lastFrame = time;
+
+            for (const { ctx, particles } of chunks.values()) {
+                ctx.clearRect(0, 0, CHUNK_WIDTH, height);
+                ctx.fillStyle = color;
+
+                for (const p of particles) {
+                    const x = p.x +
+                        Math.sin(time * 0.0002 + p.phase) * 6;
+
+                    const y = p.y +
+                        Math.cos(time * 0.00017 + p.phase) * 5;
+
+                    ctx.globalAlpha = p.opacity;
+
+                    ctx.beginPath();
+                    ctx.arc(x, y, p.size, 0, Math.PI * 2);
+                    ctx.fill();
+                }
+            }
+
+            for (const { ctx } of chunks.values()) {
+                ctx.globalAlpha = 1;
+            }
+        }
+
+        requestAnimationFrame(render);
+    }
+
+    window.addEventListener("scroll", updateChunks, {
+        passive: true
+    });
+
+    window.addEventListener("resize", () => {
+        height = host.clientHeight;
+        dpr = Math.min(window.devicePixelRatio || 1, 1.5);
+
+        for (const chunk of chunks.values()) {
+            chunk.canvas.remove();
+        }
+
+        chunks.clear();
+        updateChunks();
+    });
+
+    updateChunks();
+    requestAnimationFrame(render);
 }
 
 window.addEventListener("resize", fitTimelineWidth);
@@ -377,7 +562,9 @@ window.addEventListener("wheel", (e) => {
 
     if (infoPanel) {
         // Allow scrolling inside the articles
-        if (e.target.closest(".info-panel-articles-wrapper")) {
+        if (e.target.closest(
+            ".info-panel-articles-wrapper, .info-panel-shortcut-wrapper"
+        )) {
             return;
         }
 
@@ -426,6 +613,7 @@ fetch('./JSON/timeline-events.json')
         fitTimelineWidth();
 
         initScrollingParticles("particles-js", {"particles":{"number":{"value":66,"density":{"enable":true,"value_area":1025.8919341219544}},"color":{"value":"#ffffff"},"shape":{"type":"circle","stroke":{"width":0,"color":"#000000"},"polygon":{"nb_sides":5},"image":{"src":"img/github.svg","width":100,"height":100}},"opacity":{"value":0.4,"random":true,"anim":{"enable":false,"speed":1,"opacity_min":0.1,"sync":false}},"size":{"value":5,"random":true,"anim":{"enable":true,"speed":0.5,"size_min":0.1,"sync":false}},"line_linked":{"enable":false,"distance":150,"color":"#ffffff","opacity":0.2,"width":0.3},"move":{"enable":true,"speed":0.2,"direction":"none","random":true,"straight":false,"out_mode":"out","bounce":false,"attract":{"enable":false,"rotateX":600,"rotateY":1200}}},"interactivity":{"detect_on":"canvas","events":{"onhover":{"enable":false,"mode":"repulse"},"onclick":{"enable":false,"mode":"repulse"},"resize":true},"modes":{"grab":{"distance":400,"line_linked":{"opacity":1}},"bubble":{"distance":400,"size":40,"duration":2,"opacity":8,"speed":3},"repulse":{"distance":200,"duration":0.4},"push":{"particles_nb":4},"remove":{"particles_nb":2}}},"retina_detect":true});
+        
     });
 
 animate();
