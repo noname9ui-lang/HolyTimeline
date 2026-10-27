@@ -120,8 +120,21 @@ html::-webkit-scrollbar {
     font-weight: bold;
 }
 
+.infoPanelClickBlocker {
+    position: fixed;
+    display: flex;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    pointer-events: all;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(3px);
+}
+
 .info-panel {
-    display: none;
+    display: flex;
     width: 60%;
     height: 70%;
     background: rgba(3, 5, 13, 0.8);
@@ -135,6 +148,113 @@ html::-webkit-scrollbar {
     padding-right:20px;
     border-radius: 10px;
     overflow: hidden;
+}
+
+.exit-info-panel {
+    display: flex;
+    position: absolute;
+    right: 0;
+    top: 8px;
+    transform: translate(20px, -15px);
+    height: 49px;
+    width: 75px;
+    border-radius: 30px;
+    background: rgba(3, 3, 6, 0.5);
+    outline: 2px solid rgba(255, 255, 255, 0.24);
+    box-shadow: rgba(255, 255, 255, 0.1) 0px 0px 8.5px 0px, rgba(255, 255, 255, 0.1) 0px 0px 1.7px 0px;
+    padding-left: 25px;
+    padding-bottom: 15px;
+    padding-top: 15px;
+    justify-content: flex-start;
+    cursor: pointer;
+    align-items: center;
+    scale: 0.6;
+    transform-origin: right;
+    will-change: filter;
+    transition: all 0.4s cubic-bezier(0.075, 0.82, 0.165, 1), outline-width 0.05s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.exit-info-panel:active {
+    outline-width: 0;
+    width: 70px;
+    border-radius: 32px;
+    transform: translate(25px, -15px) scale(0.97);
+    background: rgba(126, 1, 1, 0.5);
+    filter: saturate(0.7);
+    box-shadow: rgba(0, 0, 0, 0.06) 0px 3.2px 6.4px 0px inset;
+}
+
+.exit-info-panel-x {
+    position: static;
+    translate: -5px;
+}
+
+
+
+.info-panel-articles-wrapper {
+    width: 90%;
+    height: 90%;
+    min-height: 0;
+    box-sizing: border-box;
+    padding: 50px 20px 25px 50px;
+
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.articles-columns {
+    column-width: 220px;
+    column-gap: 25px;
+    column-fill: balance;
+}
+
+.info-panel-article {
+    display: block;
+    width: 100%;
+    break-inside: avoid;
+    margin-bottom: 20px;
+}
+
+.article-title-wrapper {
+    max-width: 100%;
+    white-space: wrap;
+    overflow-y: show;
+}
+
+.article-title {
+    font-size: 25px;
+    font-family: monospace;
+    line-height: 20px;
+    font-weight: bold;
+    margin-top: 0;
+}
+
+.article-description-wrapper {
+    display: flex;
+    font-family: monospace;
+    max-height: 500px;
+    transform: translateY(-15px);
+    margin-bottom: 20px;
+}
+
+.article-description {
+    font-size: 15px;
+}
+
+.article-links-wrapper {
+    display: none;
+}
+
+.article-author-wrapper {
+    margin-top: none;
+    transform: translateY(-100%);
+    margin-bottom: none;
+}
+
+.article-author {
+    line-height: 0;
+    font-family: monospace;
+    font-size: 11px;
 }
 
 .info-panel-sidebar {
@@ -160,16 +280,21 @@ html::-webkit-scrollbar {
     align-self: center;
     padding-bottom: 10px;
     z-index: 5;
+    translate: -100%;
+    box-shadow: none;
+    opacity: 0.8;
+    pointer-events: none;
 }
 
 .info-panel-sidebar-closed {
     display: flex;
     border-radius: 30px;
-    width: 40px;
+    width: 35px;
     transform: translate(-20px);
     margin-top: 10px;
     height: 20px;
-    background: rgba(0, 0, 2, 1);
+    background: rgba(3, 3, 6, 0.5);
+    outline: 2px solid rgba(255, 255, 255, 0.24);
     padding: 15px;
     padding-right: 15px;
     align-items:center;
@@ -177,6 +302,12 @@ html::-webkit-scrollbar {
     text-align: center;
     justify-content: flex-end;
     justify-items: center;
+    cursor: pointer;
+    transition: all 0.8s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.info-panel-sidebar-closed:active {
+    translate: -100%;
 }
 
 .info-panel-shortcut-wrapper {
@@ -190,7 +321,6 @@ html::-webkit-scrollbar {
 
 .info-panel-sidebar-burger-quick-action {
     display: flex;
-    cursor: pointer;
     align-items: center;
     justify-content: center;
     width: 24px;
@@ -395,7 +525,8 @@ html::-webkit-scrollbar {
 }
 
 .label.expanded .event-list {
-    max-height: 1000px;
+    max-height: 35vh;
+    overflow-y: scroll;
 }
 
 .show-more {

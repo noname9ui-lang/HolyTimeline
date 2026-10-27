@@ -18,14 +18,15 @@
         <div id="blur-layer"></div>
         <div id="patern-layer" class="pattern-cross-dots-xl"></div>
         <div class="timeline unselectable" id="timeline">
-            <div class="event">
+            <!--<div class="event">
                 <span class="year">13800000000 BCE</span>
                 <span class="label">It all begins...</span>
-            </div>
+            </div>-->
         </div>
     </div>
 
-    <div class="info-panel glass-card">
+    <!--
+    <div class="info-panel glass-card" id="info-panel">
         <div class="info-panel-sidebar" id="info-panel-sidebar">
             <div class="info-panel-sidebar-quick-action-wrapper">
                 <div class="group info-panel-search-bar">
@@ -47,7 +48,7 @@
                 </div>
                 <div class="info-panel-sidebar-burger-quick-action" id="info-panel-sidebar-burger">
                     <label class="burger x" for="burger">
-                        <input type="checkbox" id="burger">
+                        <input id="burger">
                         <span></span>
                         <span></span>
                         <span></span>
@@ -66,10 +67,21 @@
             </div>
         </div>
 
-        <div class="info-panel-sidebar-closed">
+        <div class="exit-info-panel" id="exit-info-panel">
+            <div class="exit-info-panel-x">
+                <label class="burger x">
+                    <input id="burger-x">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </label>
+            </div>
+        </div>
+
+        <div class="info-panel-sidebar-closed" id="info-panel-sidebar-closed">
             <div class="info-panel-sidebar-burger-quick-action" id="info-panel-sidebar-burger-closed">
                 <label class="burger">
-                    <input type="checkbox" id="burger-closed">
+                    <input id="burger-closed">
                     <span></span>
                     <span></span>
                     <span></span>
@@ -97,6 +109,9 @@
             </div>
         </div>
     </div>
+
+    <div class="infoPanelClickBlocker"></div>
+    -->
 
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script src="./JS/script.js" type="module"></script>

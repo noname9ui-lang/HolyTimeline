@@ -1,11 +1,5 @@
 const timeline = document.querySelector("#timeline");
 
-const burgerClosed = document.getElementById("info-panel-sidebar-burger-closed")
-const burger = document.getElementById("info-panel-sidebar-burger")
-const infoPanelSidebar = document.querySelector("#info-panel-sidebar")
-
-var sidebarState = true
-
 let target = window.scrollX;
 
 function getMaxScroll() {
@@ -15,18 +9,146 @@ function getMaxScroll() {
     );
 }
 
-window.addEventListener("wheel", (e) => {
-    if (e.deltaY !== 0) {
-        e.preventDefault();
+function setupInfoPanel(infoPanel, clickBlocker) {
+    const burgerClosed = infoPanel.querySelector("#info-panel-sidebar-closed")
+    const burger = infoPanel.querySelector("#info-panel-sidebar-burger")
+    const infoPanelSidebar = infoPanel.querySelector("#info-panel-sidebar")
+    const exitInfoPanel = infoPanel.querySelector("#exit-info-panel")
 
-        target += e.deltaY * 3;
+    let sidebarState = false
 
-        target = Math.max(
-            0,
-            Math.min(target, getMaxScroll())
-        );
-    }
-}, { passive: false });
+    exitInfoPanel.addEventListener("click", () => {
+        infoPanel.remove()
+        clickBlocker.remove()
+    });
+    
+    burger.addEventListener("click", () => {
+    if (!sidebarState) return;
+    
+    burgerClosed.style.translate = "0"
+    infoPanelSidebar.style.translate = "-100%";
+    infoPanelSidebar.style.boxShadow = "none";
+    infoPanelSidebar.style.opacity = "0.8"
+    infoPanelSidebar.style.pointerEvents = "none"
+    sidebarState = !sidebarState
+    })
+
+    burgerClosed.addEventListener("mousedown", () => {
+        burgerClosed.style.translate = "-100%"
+
+        document.addEventListener("mouseup", () => {
+            if (sidebarState) return;
+
+            infoPanelSidebar.style.translate = "0 0";
+            infoPanelSidebar.style.boxShadow = "20px 15px 10px rgba(0, 0, 0, 0.24);";
+            infoPanelSidebar.style.opacity = "1"
+            infoPanelSidebar.style.pointerEvents = "all"
+            sidebarState = !sidebarState
+        }, {once: true});
+    })
+}
+
+function openInfoPanel(events, id) {
+    const clickBlocker = document.createElement("div")
+    const infoPanel = document.createElement("div");
+    clickBlocker.classList = "infoPanelClickBlocker"
+    infoPanel.classList = "info-panel glass-card"
+    infoPanel.style.display = "flex"
+    infoPanel.id = id
+    infoPanel.innerHTML = `
+    <div class="info-panel-sidebar" id="info-panel-sidebar">
+        <div class="info-panel-sidebar-quick-action-wrapper">
+            <div class="group info-panel-search-bar">
+                <svg viewBox="0 0 24 24" aria-hidden="true" class="search-icon">
+                    <g>
+                    <path
+                        d="M21.53 20.47l-3.66-3.66C19.195 15.24 20 13.214 20 11c0-4.97-4.03-9-9-9s-9 4.03-9 9 4.03 9 9 9c2.215 0 4.24-.804 5.808-2.13l3.66 3.66c.147.146.34.22.53.22s.385-.073.53-.22c.295-.293.295-.767.002-1.06zM3.5 11c0-4.135 3.365-7.5 7.5-7.5s7.5 3.365 7.5 7.5-3.365 7.5-7.5 7.5-7.5-3.365-7.5-7.5z"
+                    ></path>
+                    </g>
+                </svg>
+
+                <input
+                    id="info-panel-search-bar-input"
+                    class="input info-panel-search-bar-input"
+                    type="search"
+                    placeholder="Search..."
+                    name="searchbar"
+                />
+            </div>
+            <div class="info-panel-sidebar-burger-quick-action" id="info-panel-sidebar-burger">
+                <label class="burger x" for="burger">
+                    <input id="burger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </label>
+            </div>
+            
+        </div>
+        
+        <div class="info-panel-shortcut-wrapper">
+            <div class="info-panel-shortcut">
+                <button class="btn-28 info-panel-shortcut-button">Test Button 1</button>
+            </div>
+            <div class="info-panel-shortcut">
+                <button class="btn-28 info-panel-shortcut-button">Test Button 2</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="exit-info-panel" id="exit-info-panel">
+        <div class="exit-info-panel-x">
+            <label class="burger x">
+                <input id="burger-x">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+        </div>
+    </div>
+
+    <div class="info-panel-sidebar-closed" id="info-panel-sidebar-closed">
+        <div class="info-panel-sidebar-burger-quick-action" id="info-panel-sidebar-burger-closed">
+            <label class="burger">
+                <input id="burger-closed">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+        </div>
+    </div>
+
+    <div class="info-panel-articles-wrapper">
+        <div class="articles-columns">
+            ${events.map(event => `
+                <div class="info-panel-article">
+                    <div class="article-title-wrapper">
+                        <h1 class="article-title">${event.title}</h1>
+                    </div>
+                    <div class="article-author-wrapper">
+                        <span class="article-author">Person</span>
+                    </div>
+
+                    <div class="article-header-image"></div>
+
+                    <div class="article-description-wrapper">
+                        <span class="article-description">
+                            ${event.description ?? "No description"}
+                        </span>
+                    </div>
+
+                    <div class="article-links-wrapper"></div>
+                </div>
+            `).join("")}
+        </div>
+    </div>
+    `
+
+    document.body.appendChild(infoPanel);
+    document.body.appendChild(clickBlocker);
+
+    setupInfoPanel(infoPanel, clickBlocker)
+}
 
 function animate() {
     target = Math.min(target, getMaxScroll());
@@ -42,28 +164,6 @@ function animate() {
 
     requestAnimationFrame(animate);
 }
-
-//animate();
-
-burger.addEventListener("click", () => {
-    if (!sidebarState) return;
-
-    infoPanelSidebar.style.translate = "-100%";
-    infoPanelSidebar.style.boxShadow = "none";
-    infoPanelSidebar.style.opacity = "0.8"
-    infoPanelSidebar.style.pointerEvents = "none"
-    sidebarState = !sidebarState
-})
-
-burgerClosed.addEventListener("click", () => {
-    if (sidebarState) return;
-
-    infoPanelSidebar.style.translate = "0 0";
-    infoPanelSidebar.style.boxShadow = "20px 15px 10px rgba(0, 0, 0, 0.24);";
-    infoPanelSidebar.style.opacity = "1"
-    infoPanelSidebar.style.pointerEvents = "all"
-    sidebarState = !sidebarState
-})
 
 function newEvent(year, events) {
     const newDiv = document.createElement("div");
@@ -87,10 +187,13 @@ function newEvent(year, events) {
 
     const button = newDiv.querySelector(".show-more");
     const label = newDiv.querySelector(".label");
+    label.id = Math.floor(Math.random() * 1000000000);
 
-    label.addEventListener("click", () => {
-        console.log("clicked")
-    })
+    label.addEventListener("click", (e) => {
+        if (e.target.closest(".show-more")) return;
+
+        openInfoPanel(events, label.id);
+    });
 
     if (button) {
         const eventList = newDiv.querySelector(".event-list");
@@ -195,7 +298,6 @@ function parseYear(year) {
         : number;
 }
 
-
 function fitTimelineWidth() {
     const items = Array.from(timeline.children);
     const gap = parseFloat(getComputedStyle(timeline).columnGap) || 0;
@@ -213,9 +315,6 @@ function fitTimelineWidth() {
         + parseFloat(style.paddingRight)}px`;
 }
 
-window.addEventListener("resize", fitTimelineWidth);
-
-
 function initScrollingParticles(id, settings) {
     const host = document.getElementById(id);
     const viewport = document.createElement("div");
@@ -228,6 +327,7 @@ function initScrollingParticles(id, settings) {
     particlesJS(viewport.id, settings);
     const particles = window.pJSDom[window.pJSDom.length - 1].pJS;
     const canvas = particles.canvas.el;
+    canvas.style.pointerEvents = "none";
 
     particles.fn.vendors.densityAutoParticles = () => {
         let count = particles.particles.number.value;
@@ -269,6 +369,37 @@ function initScrollingParticles(id, settings) {
     window.addEventListener("resize", resizeParticles);
 }
 
+window.addEventListener("resize", fitTimelineWidth);
+
+
+window.addEventListener("wheel", (e) => {
+    const infoPanel = document.querySelector(".info-panel");
+
+    if (infoPanel) {
+        // Allow scrolling inside the articles
+        if (e.target.closest(".info-panel-articles-wrapper")) {
+            return;
+        }
+
+        // Block scrolling everywhere else
+        e.preventDefault();
+        return;
+    }
+
+    // Normal timeline scrolling
+    if (e.deltaY !== 0) {
+        e.preventDefault();
+
+        target += e.deltaY * 3;
+
+        target = Math.max(
+            0,
+            Math.min(target, getMaxScroll())
+        );
+    }
+}, { passive: false });
+
+
 fetch('./JSON/timeline-events.json')
     .then(response => response.json())
     .then(data => {
@@ -290,6 +421,7 @@ fetch('./JSON/timeline-events.json')
 
             newEvent(yearGroup.year, yearGroup.events);
         });
+
 
         fitTimelineWidth();
 

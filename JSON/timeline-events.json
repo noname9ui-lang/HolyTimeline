@@ -1,5 +1,19 @@
 [
     {
+        "year": "13800000000 BCE",
+        "events": [
+            {
+                "title": "It all begins...",
+                "date": "-13800000000-01-01",
+                "type": "major",
+                "description": "The universe is suddenly a thing. Nobody has any idea what to do with that information.",
+                "image-src": null,
+                "image-caption": null,
+                "sources": null
+            }
+        ]
+    },
+    {
         "year": "13799620000 BCE",
         "events": [
             {
